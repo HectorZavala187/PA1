@@ -1,0 +1,9 @@
+URLParser.exe: URLParser.o version.o
+	g++ -o URLParser.exe URLParser.o version.o
+URLParser.o: URLParser.cpp
+	g++ -c URLParser.cpp
+version.o: version.cpp
+	g++ -c version.cpp version.h
+cleanall:
+	rm *.o
+	rm *.exe
